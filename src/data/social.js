@@ -10,11 +10,6 @@ export default [
         label: "X/Twitter",
     },
     {
-        name: "bluesky",
-        icon: "fa:fa-brands fa-bluesky",
-        label: "Bluesky",
-    },
-    {
         name: "linkedin",
         icon: "fa:fa-brands fa-linkedin",
         label: "Linkedin",

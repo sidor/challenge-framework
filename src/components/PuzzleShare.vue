@@ -2,15 +2,17 @@
     <div class="text-center">
         <h2>Congratulations, you have solved this challenge!</h2>
         <p class="my-2">
-            Share your success and motivate your friends to give it a try!
+            Share your success and motivate others to give it a try!
         </p>
         <div>
             <ShareNetwork
                 v-for="network in socialNetworks"
                 :key="network.name"
                 :network="network.name"
-                url="https://challenge.bellingcat.com/"
                 v-slot="{ share }"
+                url="https://challenge.bellingcat.com/"
+                :title="`I've just solved the '${puzzleTitle}' challenge on Bellingcat 🏆 Try it yourself!`"
+                twitter-user="bellingcat"
             >
                 <v-btn
                     variant="flat"
@@ -34,6 +36,6 @@ import { ShareNetwork } from "vue3-social-sharing";
 import socialNetworks from "@/data/social";
 
 defineProps({
-    puzzle: Object,
+    puzzleTitle: String,
 });
 </script>
