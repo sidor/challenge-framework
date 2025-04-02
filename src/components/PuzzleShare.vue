@@ -1,9 +1,6 @@
 <template>
     <div class="text-center">
-        <h2>Congratulations, you have solved this challenge!</h2>
-        <p class="my-2">
-            Share your success and motivate others to give it a try!
-        </p>
+        <h2>Congratulations! You solved this challenge! 🎉</h2>
         <div>
             <ShareNetwork
                 v-for="network in socialNetworks"
@@ -11,8 +8,7 @@
                 :network="network.name"
                 v-slot="{ share }"
                 url="https://challenge.bellingcat.com/"
-                :title="`I've just solved the '${puzzleTitle}' challenge on Bellingcat 🏆 Try it yourself!`"
-                twitter-user="bellingcat"
+                :title="`I just solved Bellingcat's '${puzzleTitle}' challenge 🏆 Try it yourself!`"
             >
                 <v-btn
                     variant="flat"
@@ -27,6 +23,9 @@
                 </v-btn>
             </ShareNetwork>
         </div>
+        <p class="my-2">
+            Share your success and encourage others to give it a try.
+        </p>
     </div>
 </template>
 
